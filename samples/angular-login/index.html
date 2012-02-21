@@ -12,15 +12,22 @@
 		<script src="bs-widgets.js"></script>
 
         <script type="text/javascript">
-        function ModalLoginCtrl(login, $defer) {
+        function ModalLoginCtrl(login, $defer, $location) {
             var self = this;
             
             var modalEl = $('#modal-login');
+            
+            var search = window.location.search;
                 
-            if (self.$eval("!loggedIn")) {
-                $('#modal-login').modal('show');
-            }
+                
+             if (self.$eval("!loggedIn")) {
+                if (search != "?auto=0") {
+//                    $('#modal-login').modal('show');
+                    window.setTimeout(function() {$('#modal-login').modal('show')}, 0);
+                } 
+             }
         
+            
             this.login = function(u,p) {
                 login.login(u, p).then(function(value) {
                     // Success - $rootScope was updated by the service
