@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:ng="http://angularjs.org" xmlns:msg="http://code.msgilligan.com/" xmlns:bs="http://twitter.github.com/bootstrap/" ng:app="msg">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular/Bootstrap Login</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap-1.4.css"  />
+        <script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+        <script src="jquery.cookie.js"></script>
+        <script src="bootstrap-modal.js"></script>
+		<script src="angular-0.10.6.js"></script>
+		<script src="msg-services.js"></script>
+		<script src="bs-widgets.js"></script>
+
+        <script type="text/javascript">
+        function ModalLoginCtrl(login, $defer) {
+            var self = this;
+            
+            var modalEl = $('#modal-login');
+                
+            if (self.$eval("!loggedIn")) {
+                $('#modal-login').modal('show');
+            }
+        
+            this.login = function(u,p) {
+                login.login(u, p).then(function(value) {
+                    // Success - $rootScope was updated by the service
+                    $('#modal-login').modal('hide');
+                }, function(reason) {
+                    alert("bad login, try again");
+                });
+            }
+            
+            this.cancel = function() {
+                login.cancel();
+                $('#modal-login').modal('hide');
+            }
+            
+            this.disableLogin = function() {
+                return this.modalLoginForm.$invalid;
+            };
+        }
+
+        function HelloCtrl(Hello, login) {
+                var self = this;
+
+                this.load = function() {
+                    self.events = Hello.get({}, function(json) {
+                            self.hello = json.message;
+                    }, function(err) {
+                            console.log("Error loading hello: " + err);
+                    });
+                }
+                
+                var li = self.$eval("loggedIn");
+                if (li) {
+                    self.load();
+                } else {
+                    self.$on('login', function(event) {
+                        self.load();
+                    });
+                }
+                                        
+        }
+        </script>
+
+    </head>
+    <body>
+        <div id="modal-login" class="modal hide fade" ng:controller="ModalLoginCtrl">
+            <div class="modal-header">
+                <h3>Login Required</h3>
+            </div>
+            <form name="modalLoginForm">
+                <div class="modal-body">
+                    <p>This page requires login:</p>
+                            <input class="span4" type="text" name="username" ng:model="username" required placeholder="username">
+                            <input class="span4" type="password" name="password" ng:model="password" required placeholder="password">
+                </div>
+                <div class="modal-footer">
+                    <a class="btn primary" ng:disabled="{{disableLogin()}}" ng:click="login(username,password)">Login</a>
+                    <a class="btn secondary" ng:click="cancel()">Cancel</a>
+                </div>
+            </form>
+        </div>
+        
+        <div class="container" ng:controller="HelloCtrl">
+            <div class="content">
+                <div class="row">	
+                    <div class="span16" style="text-align: center">
+                        <h2>Message</h2>
+                        <p ng:cloak>{{hello}}</p>
+                        <p><a class="btn" data-controls-modal="modal-login" data-backdrop="true" >Launch Login Modal</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
