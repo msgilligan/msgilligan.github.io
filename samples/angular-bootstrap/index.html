@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" xmlns:ng="http://angularjs.org" ng:app="bsd">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>ng:bootstrap</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap-2.0.1.css" type="text/css" media="screen, projection" rel="stylesheet" />
+        <link href="css/bsd.css" type="text/css" media="screen, projection" rel="stylesheet" />
+        <script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	</head>
+	<body>
+        <!-- ========== NavBarCtrl ================= -->
+		<div class="navbar navbar-fixed-top" ng:controller="NavBarCtrl">
+			<div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">ng:bootstrap</a>
+                    <!-- ========== testSearchForm ================= -->
+                    <form name="testSearchForm" ng:submit="testSearch(testSearchInput)" ng:show="true" class="navbar-form ng-cloak" ng:cloak>
+                        <input type="text" name="testSearchInput" ng:model="testSearchInput" placeholder="Test me">
+                    </form>
+                </div>
+  		    </div>
+		</div>
+        <div class="container">
+        	<div class="content">
+        		<h2>Demo</h2>
+        		<p>Right now, it just demos a bug in the search box...</p>
+        	</div>
+            <footer>
+                <p>MIT license</p>
+            </footer>
+        </div>
+        <script src="js/angular-0.10.7-b9bcc0f6.js"></script>
+        <script src="js/bsd.js"></script>
+	</body>
+</html>
