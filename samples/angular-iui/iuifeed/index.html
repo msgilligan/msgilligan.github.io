@@ -11,10 +11,13 @@
 	<link rel="stylesheet" title="Default" href="../iui/t/default/default-theme.css"  type="text/css"/>
 	<style type="text/css">
 .panel p {
-        text-align: left; 
-        text-indent:10px;
-        padding: 0 10px 0 10px; 
-    }
+    text-align: left;
+    text-indent: 10px;
+    padding: 0 10px;
+}
+[ng-cloak] {
+    display: none;
+}
     </style>
 </head>
 
@@ -25,7 +28,7 @@
     </div>
     
 	<ul id="home" title="Updates" shown="true" ng:controller="FeedListCtrl" >
-		<li ng:cloak ng:repeat="entry in entries"><a href="#details" ng:click="myclick(entry)">{{entry.committer.login}}: {{entry.getDate() | date:'HH:mm MM/dd/yy'}}</a></li>
+		<li ng-cloak ng:repeat="entry in entries"><a href="#details" ng:click="myclick(entry)">{{entry.committer.login}}: {{entry.getDate() | date:'HH:mm MM/dd/yy'}}</a></li>
 	</ul>
 	
 	<div id="details" class="panel">
