@@ -1,0 +1,5 @@
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+jettyRun.contextPath = '/'
+jettyRun.webAppSourceDirectory = file("$rootDir")
