@@ -1,0 +1,85 @@
+<html>
+<head>
+  <title>Mashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <link rel="icon" type="image/png" href="iui/iui-favicon.png">
+  <link rel="apple-touch-icon" href="" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="iui/iui.css" type="text/css" />
+  <link rel="stylesheet" title="Default" href="iui/t/default/default-theme.css"  type="text/css"/>
+  <link rel="stylesheet" href="css/iui-panel-list.css" type="text/css" />
+  <link rel="stylesheet" href="iui/ext-sandbox/iscroll/iui-iscroll.css" type="text/css" />
+  <link rel="stylesheet" href="css/custom.css">
+  <script type="application/x-javascript" src="iui/iui.js"></script>
+  <script type="application/x-javascript" src="iui/ext-sandbox/iscroll/iscroll.js"></script>
+  <script type="application/x-javascript" src="iui/ext-sandbox/iscroll/iui-iscroll.js"></script>
+  <script>
+    iui.debug = true;  // enable portrait/landscape swapping in desktop browser for debugging
+  </script>
+</head>
+<body>
+  <div id="iui-container" class="iuinopopover">
+    <div class="toolbar">
+        <h1 id="pageTitle"></h1>
+        <a id="backButton" class="button" href="#"></a>
+    </div>
+
+    <div id="home" title="msgilli...github" selected="true">
+      <div class="wrapper">
+        <div class="scroller">
+          <ul>
+            <li><a href="#about">About this site</a></li>
+            <li>Projects</li>
+            <li>Demos</li>
+            <li>Repositories</li>
+            <li><a href="#other">Other sites</a></li>
+            <li>Hire me</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="panel content" title="msgilli...github">
+      <h2>About This Site</h2>
+      <ul>
+      <li><a target="_blank" href="http://msgilligan.github.com">Non-mobile version</a></li>
+      <li><a target="_blank" href="http://www.iui-js.org">iUI Project</a></li>
+      <li><a target="_blank" href="https://github.com/mikhailxu/Mashboard">Mashboard on GitHub</a></li>
+      </ul>
+    </div>
+
+    <div id="other" class="panel content" title="Other Sites">
+      <h2>Elsewhere on the Web</h2>
+      <ul>
+        <li><a target="_blank" href="http://twitter.com/msgilligan">Sean's Twitter</a></li>
+        <li><a target="_blank" href="http://code.msgilligan.com">Sean's Blog</a></li>
+      </ul>
+    </div>
+
+    <div id="other-old" title="Elsewhere">
+      <div class="wrapper">
+        <div class="scroller">
+          <ul>
+            <li><a target="_blank" href="http://twitter.com/msgilligan">Sean's Twitter</a></li>
+            <li><a target="_blank" href="http://code.msgilligan.com">Sean's Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="iuipad-content-panel">
+    <div class="toolbar">
+        <h1 id="contentTitle"></h1>
+        <a class="button leftButton" href="javascript:iui.popover_toc()" id="toc_button">TOC</a>
+    </div>
+    <div class="wrapper">
+      <div class="scroller">
+        <div id="iuipad-content">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
