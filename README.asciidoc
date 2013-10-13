@@ -1,5 +1,5 @@
-Sean Gilligan's GitHub User Pages
-=================================
-http://msgilligan.github.com
+= Sean Gilligan's GitHub User Pages
+
+Source code for http://msgilligan.github.io[msgilligan.github.io].
 
 
