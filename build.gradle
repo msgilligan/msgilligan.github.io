@@ -6,10 +6,12 @@ buildscript {
 
     dependencies {
         classpath 'org.asciidoctor:asciidoctor-gradle-plugin:0.7.0'
+        classpath 'org.ajoberstar:gradle-git:0.7.1'
     }
 }
 
 apply plugin: 'asciidoctor'
+apply plugin: 'github-pages'
 
 def siteDir = "$buildDir/site"
 
@@ -28,6 +30,23 @@ asciidoctor {
     ]
 }
 
+githubPages {
+//  repoUri = 'git@github.com:msgilligan/msgilligan.github.io.git'
+  repoUri = 'https://github.com/msgilligan/msgilligan.github.io.git'
+  targetBranch = 'master'
+
+  pages {
+     from(file("$siteDir")) {
+     	into '.'
+     }
+  }
+  credentials {
+    username = msgGithubAccessToken
+//    password = ''
+  }
+}
+
+
 task copyStatic(type: Copy,
     group: 'render',
     description: "Copies static files to buildDir") {
@@ -44,10 +63,15 @@ task generate(dependsOn: [copyStatic, asciidoctor],
     }
 }
 
-task publish(type: GradleBuild, dependsOn: generate,
-    group: 'render',
-    description: "Publishes buildDir to gh-pages") {
-    buildFile = 'publish.gradle'
-    tasks = ['publishGhPages']
-}
+publishGhPages.dependsOn generate
+
+task publish(dependsOn: publishGhPages, group: 'render',
+            description: "Publishes buildDir to gh-pages")
+
+//task publish(type: GradleBuild, dependsOn: generate,
+//    group: 'render',
+//    description: "Publishes buildDir to gh-pages") {
+//    buildFile = 'publish.gradle'
+//    tasks = ['publishGhPages']
+//}
 
