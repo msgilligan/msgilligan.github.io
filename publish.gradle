@@ -4,7 +4,8 @@ buildscript {
   }
 
   dependencies {
-    classpath 'org.ajoberstar:gradle-git:0.7.0'     
+    classpath 'org.ajoberstar:gradle-git:0.7.0'
+//    classpath 'org.ajoberstar:grgit:0.2.2-beta'
   }
 }
 
@@ -18,14 +19,18 @@ import org.ajoberstar.grgit.*
 //println "ext.repo = ${ext.repo.repository}"
 
 githubPages {
-  repoUri = 'git@github.com:msgilligan/msgilligan.github.io.git'      
+//  repoUri = 'git@github.com:msgilligan/msgilligan.github.io.git'
+  repoUri = 'https://github.com/msgilligan/msgilligan.github.io'
   targetBranch = 'master'
-//  credentials.username = 'msgilligan'
   
   pages {
      from(file("$buildDir")) {
      	into '.'                                    
      }
+  }
+  credentials {
+    username = 'msgilligan'
+    password = 'badpass'
   }
 }
 
