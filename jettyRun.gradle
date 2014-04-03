@@ -1,3 +1,10 @@
+// 4 non-comment lines to download, install, configure, and run the Jetty WebServer
+// Requires Gradle, of course
+//
+// To run:
+//
+// gradle -b jettyRun.gradle jettyRun
+//
 apply plugin: 'war'
 apply plugin: 'jetty'
 
