@@ -1,0 +1,9 @@
+= Sean Gilligan's GitHub User Pages
+
+Source repository for http://msgilligan.github.io[msgilligan.github.io].
+
+* Source files are in branch +source+.
+* Generated files are in +master+ branch and displayed with Github Pages.
+
+
+
