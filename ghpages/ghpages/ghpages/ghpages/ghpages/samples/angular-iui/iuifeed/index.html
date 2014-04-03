@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org/">
+<head>
+	<title>Feed Tracker</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<link rel="icon" type="image/png" href="../iui/iui-favicon.png">
+	<link rel="apple-touch-icon" href="../iui/iui-logo-touch-icon.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" href="../iui/iui.css" type="text/css" />
+	<link rel="stylesheet" title="Default" href="../iui/t/default/default-theme.css"  type="text/css"/>
+	<style type="text/css">
+.panel p {
+    text-align: left;
+    text-indent: 10px;
+    padding: 0 10px;
+}
+[ng-cloak] {
+    display: none;
+}
+    </style>
+</head>
+
+<body ng:app="feed">
+    <div class="toolbar">
+        <h1 id="pageTitle"></h1>
+        <a id="backButton" class="button" href="#"></a>
+    </div>
+    
+	<ul id="home" title="Updates" shown="true" ng:controller="FeedListCtrl" >
+		<li ng-cloak ng:repeat="entry in entries"><a href="#details" ng:click="myclick(entry)">{{entry.committer.login}}: {{entry.getDate() | date:'HH:mm MM/dd/yy'}}</a></li>
+	</ul>
+	
+	<div id="details" class="panel">
+		<h2>Entry Details</h2>
+		<fieldset>
+			<div class="row">
+				<label>ID</label>
+				<span>{{entry.sha}}</span>
+			</div>
+			<div class="row">
+				<label>Date</label>
+				<span>{{entry.getDate() | date:'short'}}</span>
+			</div>
+			<div class="row">
+				<label>Committer</label>
+				<span>{{entry.committer.login}}</span>
+			</div>
+		</fieldset>
+		<h2>Message</h2>
+		<fieldset>
+			<p>{{entry.commit.message}}</p>
+		</fieldset>
+	</div>
+
+	<script src="../iui/iui.js"></script>
+	<script src="lib/angular/angular-1.0.0rc1.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/services.js"></script>
+</body>
+</html>
