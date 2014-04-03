@@ -1,0 +1,34 @@
+buildscript {
+  repositories {
+      jcenter()
+  }
+
+  dependencies {
+    classpath 'org.ajoberstar:gradle-git:0.7.0'     
+  }
+}
+
+apply plugin: 'github-pages'                        
+
+import org.ajoberstar.grgit.*
+
+//ext.repo = Grgit.open(project.file('.'))
+//ext.repo = Grgit.clone(dir: new File('deleteme'), uri: 'git@github.com:msgilligan/msgilligan.github.io.git')
+
+//println "ext.repo = ${ext.repo.repository}"
+
+githubPages {
+  repoUri = 'git@github.com:msgilligan/msgilligan.github.io.git'      
+  targetBranch = 'master'
+//  credentials.username = 'msgilligan'
+  
+  pages {
+     from(file("$buildDir")) {
+     	into '.'                                    
+     }
+  }
+}
+
+task show << {
+   buildscript.configurations.classpath.each { println it }
+}

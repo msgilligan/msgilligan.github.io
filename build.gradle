@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'http://dl.bintray.com/aalmiray/asciidoctor' }
+    }
+
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:0.7.0'
+    }
+}
+
+apply plugin: 'asciidoctor'
+
+asciidoctor {
+    backend = 'html5'   // html5 only for now
+//    backends = ['fopub','html5']  // Requires 0.8.0 asciidoctor plugin
+    sourceDir = file("adoc")
+    outputDir = file("$buildDir")
+    options = [
+        attributes: [
+            icons: 'font',
+            'source-highlighter': 'prettify',
+            experimental: true,
+            copycss: true
+        ]
+    ]
+}
+
+task copyStatic(type: Copy,
+    group: 'render',
+    description: "Copies static files to buildDir") {
+    from "$rootDir"
+    into "$buildDir"
+    include "index.html","README.adoc"
+}
+
+task generate(dependsOn: [copyStatic, asciidoctor],
+    group: 'render',
+    description: "Generates static site in buildDir") {
+    doLast {
+        println "Static site generated in buildDir"
+    }
+}
+
+task publish(type: GradleBuild, dependsOn: generate,
+    group: 'render',
+    description: "Publishes buildDir to gh-pages") {
+    buildFile = 'publish.gradle'
+    tasks = ['publishGhPages']
+}
+
