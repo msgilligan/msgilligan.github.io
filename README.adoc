@@ -1,20 +1,9 @@
-=  mastercoin-MSC.github.io - Mastercoin Github Organization Pages
+= Sean Gilligan's GitHub User Pages
 
-The generated website is http://mastercoin-MSC.github.io
+Source repository for http://msgilligan.github.io[msgilligan.github.io].
 
-== To make a change
+* Source files are in branch +source+.
+* Generated files are in +master+ branch and displayed with Github Pages.
 
-. Checkout the +source+ branch with Git
-. Edit +adoc/index.adoc+
-. (Optional) Learn AsciiDoc Syntax:
-.. http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc Syntax Quick Refernce]
-. (Optional) Preview your rendered work:
-.. View file directly with https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Chrome AsciiDoc plugin]
-.. Generate static site with +./gradlew generate+
-. Commit your changes to the +source+ branch with Git
-
-== To publish
-
-. Run +./gradlew publish+
 
 
