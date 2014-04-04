@@ -66,7 +66,7 @@ task generate(dependsOn: [copyStatic, asciidoctor],
 publishGhPages.dependsOn generate
 
 task publish(dependsOn: publishGhPages, group: 'render',
-            description: "Publishes buildDir to gh-pages")
+            description: "Publishes buildDir to Github Pages on 'master' branch")
 
 //task publish(type: GradleBuild, dependsOn: generate,
 //    group: 'render',
