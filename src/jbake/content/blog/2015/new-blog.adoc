@@ -1,20 +1,30 @@
-= Fourth Post
-Jonathan Bullock
-2013-10-17
+= New Blog
+Sean Gilligan
+2015-08-02
 :jbake-type: post
 :jbake-status: published
 :jbake-tags: blog, asciidoc
 :idprefix:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.
+Welcome to my new, under-construction blog. It is built using the following tools:
 
-* http://example.org
-* http://example.org[Example.org]
+* http://jbake.org[JBake]
+* https://gradle.org[Gradle]
+* https://github.com/jbake-org/jbake-gradle-plugin[JBake Gradle Plugin]
+* http://asciidoctor.org[AsciiDoctor]
+* The page templates use http://www.thymeleaf.org[Thymeleaf]
+* It is published to Github with the https://github.com/ajoberstar/gradle-git[Gradle Github Pages Plugin]
 
-Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu, 
-mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo 
-ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet 
-ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus, 
-id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales. In 
-consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere 
-libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.
+I was inspired to use the approach by http://melix.github.io/blog/[Cédric Champeau], who wrote the JBake Gradle Plugin and a blog post, http://melix.github.io/blog/2014/02/hosting-jbake-github.html[Authoring your blog on GitHub with JBake and Gradle], about how he created his blog.
+
+I'm doing a few things differently from Cédric:
+
+. My site/blog is a https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages[GitHub User Page], his is a https://help.github.com/articles/user-organization-and-project-pages/#project-pages[Github Project Page] (for repository https://github.com/melix/blog[melix/blog])
+.. The repository name is of the format `username.github.io`
+.. The source code lives in the `source` branch and the rendered HTML is pushed to the `master` branch.
+. I'm using the Thymeleaf http://jbake.org/docs/2.4.0/#templates_directory[JBake templates] (and Cédric is using http://freemarker.org[Freemarker] -- what, not http://melix.github.io/blog/2014/02/markuptemplateengine.html[Groovy]?)
+
+I'm also hoping to migrate content from http://www.msgilligan.com[www.msgilligan.com], my 10-year-old http://docbook.sourceforge.net/release/website/example/[DocBook Website]-powered site, register a https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/[custom domain], and replace that site. I've used XSLT to convert my DocBook-Website XML files to regular http://www.docbook.org[DocBook XML] and then http://pandoc.org[PanDoc] to convert them to AsciiDoc format. Some manual massaging is still needed. Stay tuned...
+
+
+
