@@ -1,0 +1,73 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>msgilligan.github.io feed</title>
+    <link>http://msgilligan.github.io</link>
+    <atom:link href="http://msgilligan.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <description>JBake Bootstrap Template</description>
+    <language>en-gb</language>
+    <pubDate>Sun, 2 Aug 2015 13:35:02 -0700</pubDate>
+    <lastBuildDate>Sun, 2 Aug 2015 13:35:02 -0700</lastBuildDate>
+
+    <item>
+      <title>New Blog</title>
+      <link>http://msgilligan.github.io/blog/2015/new-blog.html</link>
+      <pubDate>Sun, 2 Aug 2015 00:00:00 -0700</pubDate>
+      <guid isPermaLink="false">blog/2015/new-blog.html</guid>
+      <description>&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt;
+&amp;lt;p&amp;gt;Welcome to my new, under-construction blog. It is built using the following tools:&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;ulist&amp;quot;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://jbake.org&amp;quot;&amp;gt;JBake&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://gradle.org&amp;quot;&amp;gt;Gradle&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/jbake-org/jbake-gradle-plugin&amp;quot;&amp;gt;JBake Gradle Plugin&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://asciidoctor.org&amp;quot;&amp;gt;AsciiDoctor&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;p&amp;gt;The page templates use &amp;lt;a href=&amp;quot;http://www.thymeleaf.org&amp;quot;&amp;gt;Thymeleaf&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;p&amp;gt;It is published to Github with the &amp;lt;a href=&amp;quot;https://github.com/ajoberstar/gradle-git&amp;quot;&amp;gt;Gradle Github Pages Plugin&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt;
+&amp;lt;p&amp;gt;I was inspired to use the approach by &amp;lt;a href=&amp;quot;http://melix.github.io/blog/&amp;quot;&amp;gt;Cédric Champeau&amp;lt;/a&amp;gt;, who wrote the JBake Gradle Plugin and a blog post, &amp;lt;a href=&amp;quot;http://melix.github.io/blog/2014/02/hosting-jbake-github.html&amp;quot;&amp;gt;Authoring your blog on GitHub with JBake and Gradle&amp;lt;/a&amp;gt;, about how he created his blog.&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt;
+&amp;lt;p&amp;gt;I&amp;amp;#8217;m doing a few things differently from Cédric:&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;olist arabic&amp;quot;&amp;gt;
+&amp;lt;ol class=&amp;quot;arabic&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;p&amp;gt;My site/blog is a &amp;lt;a href=&amp;quot;https://help.github.com/articles/user-organization-and-project-pages/#user&amp;amp;#8212;&amp;amp;#8203;organization-pages&amp;quot;&amp;gt;GitHub User Page&amp;lt;/a&amp;gt;, his is a &amp;lt;a href=&amp;quot;https://help.github.com/articles/user-organization-and-project-pages/#project-pages&amp;quot;&amp;gt;Github Project Page&amp;lt;/a&amp;gt; (for repository &amp;lt;a href=&amp;quot;https://github.com/melix/blog&amp;quot;&amp;gt;melix/blog&amp;lt;/a&amp;gt;)&amp;lt;/p&amp;gt;
+&amp;lt;div class=&amp;quot;olist loweralpha&amp;quot;&amp;gt;
+&amp;lt;ol class=&amp;quot;loweralpha&amp;quot; type=&amp;quot;a&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;p&amp;gt;The repository name is of the format &amp;lt;code&amp;gt;username.github.io&amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;p&amp;gt;The source code lives in the &amp;lt;code&amp;gt;source&amp;lt;/code&amp;gt; branch and the rendered HTML is pushed to the &amp;lt;code&amp;gt;master&amp;lt;/code&amp;gt; branch.&amp;lt;/p&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;p&amp;gt;I&amp;amp;#8217;m using the Thymeleaf &amp;lt;a href=&amp;quot;http://jbake.org/docs/2.4.0/#templates_directory&amp;quot;&amp;gt;JBake templates&amp;lt;/a&amp;gt; (and Cédric is using &amp;lt;a href=&amp;quot;http://freemarker.org&amp;quot;&amp;gt;Freemarker&amp;lt;/a&amp;gt;&amp;amp;#8201;&amp;amp;#8212;&amp;amp;#8201;what, not &amp;lt;a href=&amp;quot;http://melix.github.io/blog/2014/02/markuptemplateengine.html&amp;quot;&amp;gt;Groovy&amp;lt;/a&amp;gt;?)&amp;lt;/p&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt;
+&amp;lt;p&amp;gt;I&amp;amp;#8217;m also hoping to migrate content from &amp;lt;a href=&amp;quot;http://www.msgilligan.com&amp;quot;&amp;gt;www.msgilligan.com&amp;lt;/a&amp;gt;, my 10-year-old &amp;lt;a href=&amp;quot;http://docbook.sourceforge.net/release/website/example/&amp;quot;&amp;gt;DocBook Website&amp;lt;/a&amp;gt;-powered site, register a &amp;lt;a href=&amp;quot;https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/&amp;quot;&amp;gt;custom domain&amp;lt;/a&amp;gt;, and replace that site. I&amp;amp;#8217;ve used XSLT to convert my DocBook-Website XML files to regular &amp;lt;a href=&amp;quot;http://www.docbook.org&amp;quot;&amp;gt;DocBook XML&amp;lt;/a&amp;gt; and then &amp;lt;a href=&amp;quot;http://pandoc.org&amp;quot;&amp;gt;PanDoc&amp;lt;/a&amp;gt; to convert them to AsciiDoc format. Some manual massaging is still needed. Stay tuned&amp;amp;#8230;&amp;amp;#8203;&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;</description>	  
+    </item>
+
+  </channel> 
+</rss>
