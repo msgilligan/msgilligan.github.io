@@ -9,17 +9,17 @@
 			<div class="page-header">
 				<h1>Blog Archive</h1>
 			</div>
-	
+
 			<div th:each="post : ${posts}" th:with='last_month=null' th:remove='tag'>
 			    <h3 th:if='${last_month!=#dates.format(post.date,"MMMM yyyy")}' th:text='${#dates.format(post.date,"MMMM yyyy")}'>June 2014</h3>
-		
-				<h4><span th:text='${#dates.format(post.date,"dd")}' th:remove='tag'/> - <a th:href="${content.rootpath+post.uri}" th:text='${post.title}' href="foo.html">Post title</a></h4>
+
+				<h4 th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')"><span th:text='${#dates.format(post.date,"dd")}' th:remove='tag'/> - <a th:href="${rootpath+post.uri}" th:text='${post.title}' href="foo.html">Post title</a></h4>
 				<span th:remove='all' th:with='last_month = ${#dates.format(post.date,"MMMM yyyy")}'/>
 			</div>
 
 		</div>
 	</div>
-	
+
 	<div th:replace="footer.thyme::footer"></div>
     </body>
 </html>

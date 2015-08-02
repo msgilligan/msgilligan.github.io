@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:th="http://www.thymeleaf.org">
   <channel>
-    <title>JBake</title>
+    <title>msgilligan.github.io feed</title>
     <link th:text='${config.site_host}'>link</link>
     <atom:link th:href='${config.site_host+"/feed.xml"}' href="link" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
