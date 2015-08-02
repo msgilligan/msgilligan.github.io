@@ -18,8 +18,10 @@ apply plugin: 'me.champeau.jbake'
 apply plugin: 'github-pages'
 
 jbake {
-  clearCache = true
+    clearCache = true
 }
+
+defaultTasks 'jbake'
 
 githubPages {
 //  repoUri = 'git@github.com:msgilligan/msgilligan.github.io.git'
