@@ -1,20 +1,21 @@
-title=About
-date=2015-08-01
-type=page
-status=published
-~~~~~~
+= About
+Sean Gilligan
+2015-08-02
+:jbake-type: page
+:jbake-status: published
+:jbake-tags: blog, asciidoc
+:idprefix:
 
 Clearly, I really hate working on personal websites. Maybe http://jbake.org[JBake] + http://asciidoctor.org[AsciiDoctor] + https://gradle.org[Gradle] will change that.
-<p>
+
 You can find further evidence of this at the following locations:
-<ul>
-  <li><a href="http://code.msgilligan.com">code.msgilligan.com (my neglected blog)</a></li>
-  <li><a href="http://www.msgilligan.com">www.msgilligan.com (my aging home page)</a></li>
-</ul>
-<p>
+
+* http://code.msgilligan.com[code.msgilligan.com] (my neglected blog)
+* http://www.msgilligan.com[www.msgilligan.com] (my aging home page)
+
 I do like working on Open Source projects, however:
-<ul>
-  <li><a href="http://github.com/msgilligan/">GitHub projects</a></li>
-  <li><a href="https://code.google.com/u/115789962356478683683/">My Google Code Profile</a></li>
-</ul>
+
+* http://github.com/msgilligan/[GitHub projects]
+* https://code.google.com/u/115789962356478683683/[Google Code Profile]
+
 
