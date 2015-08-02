@@ -18,4 +18,7 @@ I do like working on Open Source projects, however:
 * http://github.com/msgilligan/[GitHub projects]
 * https://code.google.com/u/115789962356478683683/[Google Code Profile]
 
+The source for this blog is in the `source` branch of the https://github.com/msgilligan/msgilligan.github.io/tree/source[msgilligan/msgilligan.github.io] repository.
+
+
 
