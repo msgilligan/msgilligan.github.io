@@ -5,5 +5,21 @@ Source repository for http://msgilligan.github.io[msgilligan.github.io].
 * Source files are in branch +source+.
 * Generated files are in +master+ branch and displayed with Github Pages.
 
+== Build Instructions
+
+To render the JBake site:
+
+    gradle jbake
+
+To publish to Github pages:
+
+    gradle publish
+
+You'll need to enter your Github username and password in the displayed dialog box.
+
+NOTE:: The file `feed.xml` is updated every time the `jbake` target is built, even if there were
+no other changes.
+
+
 
 
