@@ -2,8 +2,8 @@
 
 Source repository for http://msgilligan.github.io[msgilligan.github.io].
 
-* Source files are in branch +source+.
-* Generated files are in +master+ branch and displayed with Github Pages.
+* Source files are in `source` branch.
+* Generated files are in `master` branch and displayed with Github Pages.
 
 == Build Instructions
 
