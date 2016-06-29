@@ -1,6 +1,6 @@
 = About
 Sean Gilligan
-2015-08-02
+2016-06-29
 :jbake-type: page
 :jbake-status: published
 :jbake-tags: blog, asciidoc
