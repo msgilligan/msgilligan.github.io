@@ -36,7 +36,7 @@ githubPages {
      }
   }
   credentials {
-    username = msgGithubAccessToken
+    username = msgGithubAccessToken ?: ''
     password = ''
   }
 }
