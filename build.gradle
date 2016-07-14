@@ -4,7 +4,6 @@ buildscript {
     }
 
     dependencies {
-        classpath 'org.ajoberstar:gradle-git:0.7.1'
         classpath 'me.champeau.gradle:jbake-gradle-plugin:0.2'
         classpath 'org.jbake:jbake-core:2.4.0'
         classpath 'org.asciidoctor:asciidoctorj:1.5.2'
@@ -14,8 +13,11 @@ buildscript {
     }
 }
 
+plugins {
+  id "org.ajoberstar.github-pages" version "1.5.1-rc.2"
+}
+
 apply plugin: 'me.champeau.jbake'
-apply plugin: 'github-pages'
 
 jbake {
     clearCache = true
@@ -36,8 +38,10 @@ githubPages {
      }
   }
   credentials {
-    username = project.hasProperty('msgGithubAccessToken') ? msgGithubAccessToken : ''
-    password = ''
+    // Use token stored as property for local builds and a travis encrypted key (in 'GH_TOKEN') for Travis builds
+    username = project.hasProperty('msgGithubAccessToken') ? msgGithubAccessToken : System.getenv('GH_TOKEN')
+    // Apparently password can't be null or '' if githubPages to use "hardcoded" credential in the username.
+    password = '\n'
   }
 }
 

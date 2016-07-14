@@ -1,12 +1,12 @@
 = About
 Sean Gilligan
-2016-06-29
+2016-07-13
 :jbake-type: page
 :jbake-status: published
 :jbake-tags: blog, asciidoc
 :idprefix:
 
-Clearly, I really hate working on personal websites. Maybe http://jbake.org[JBake] + http://asciidoctor.org[AsciiDoctor] + https://gradle.org[Gradle] will change that.
+I do not like working on personal websites. Maybe http://jbake.org[JBake] + http://asciidoctor.org[AsciiDoctor] + https://gradle.org[Gradle] will change that.
 
 You can find further evidence of this at the following locations:
 
