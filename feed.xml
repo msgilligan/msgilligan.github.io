@@ -5,13 +5,13 @@
     <atom:link href="http://msgilligan.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Wed, 13 Jul 2016 15:56:36 -0700</pubDate>
-    <lastBuildDate>Wed, 13 Jul 2016 15:56:36 -0700</lastBuildDate>
+    <pubDate>Thu, 14 Jul 2016 00:11:14 +0000</pubDate>
+    <lastBuildDate>Thu, 14 Jul 2016 00:11:14 +0000</lastBuildDate>
 
     <item>
       <title>New Blog</title>
       <link>http://msgilligan.github.io/blog/2015/new-blog.html</link>
-      <pubDate>Sun, 2 Aug 2015 00:00:00 -0700</pubDate>
+      <pubDate>Sun, 2 Aug 2015 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/2015/new-blog.html</guid>
       <description>&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt;
 &amp;lt;p&amp;gt;Welcome to my new, under-construction blog. It is built using the following tools:&amp;lt;/p&amp;gt;
