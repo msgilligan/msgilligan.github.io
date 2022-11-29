@@ -1,0 +1,32 @@
+name: Gradle Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        java: ['11']
+        distribution: ['temurin']
+      fail-fast: false
+    name: ${{ matrix.os }} JDK ${{ matrix.java }}
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@v3
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: ${{ matrix.distribution }}
+        java-version: ${{ matrix.java }}
+    - name: Verify Gradle Wrapper
+      uses: gradle/wrapper-validation-action@v1
+    - name: Cache Gradle packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.gradle/caches
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+        restore-keys: ${{ runner.os }}-gradle
+    - name: Build with Gradle
+      run: ./gradlew jbake --info --stacktrace
