@@ -1,29 +1,23 @@
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'me.champeau.gradle:jbake-gradle-plugin:0.2'
-        classpath 'org.jbake:jbake-core:2.4.0'
-        classpath 'org.asciidoctor:asciidoctorj:1.5.2'
-        classpath 'org.thymeleaf:thymeleaf:2.1.3.RELEASE'
-        classpath 'org.thymeleaf.extras:thymeleaf-extras-conditionalcomments:2.1.1.RELEASE'
-        classpath 'org.pegdown:pegdown:1.4.2'
+        classpath  'commons-configuration:commons-configuration:1.10'
     }
 }
 
 plugins {
   id "org.ajoberstar.github-pages" version "1.5.1-rc.2"
+  id 'org.jbake.site' version '5.5.0'
 }
-
-apply plugin: 'me.champeau.jbake'
 
 jbake {
-    clearCache = true
+    version  = '2.7.0-rc.6'
+    asciidoctorjVersion = '2.5.7'
+//    clearCache = true
 }
-
-defaultTasks 'jbake'
 
 def siteDir = "$buildDir/jbake"
 
@@ -45,7 +39,7 @@ githubPages {
   }
 }
 
-publishGhPages.dependsOn jbake
+publishGhPages.dependsOn bake
 
 task publish(dependsOn: publishGhPages, group: 'render',
             description: "Publishes buildDir to Github Pages on 'master' branch")

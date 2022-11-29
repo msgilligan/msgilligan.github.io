@@ -29,4 +29,4 @@ jobs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
         restore-keys: ${{ runner.os }}-gradle
     - name: Build with Gradle
-      run: ./gradlew jbake --info --stacktrace
+      run: ./gradlew bake --info --stacktrace
