@@ -15,11 +15,12 @@ buildscript {
 
 plugins {
   id "org.ajoberstar.github-pages" version "1.5.1-rc.2"
+  id 'org.jbake.site' version '5.5.0'
 }
 
-apply plugin: 'me.champeau.jbake'
-
 jbake {
+    version  = '2.6.7'
+    asciidoctorjVersion = '2.5.7'
     clearCache = true
 }
 
