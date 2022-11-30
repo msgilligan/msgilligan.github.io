@@ -1,6 +1,6 @@
 = About
 Sean Gilligan
-2016-07-13
+2022-11-30
 :jbake-type: page
 :jbake-status: published
 :jbake-tags: blog, asciidoc
@@ -16,7 +16,6 @@ You can find further evidence of this at the following locations:
 I do like working on Open Source projects, however:
 
 * http://github.com/msgilligan/[GitHub projects]
-* https://code.google.com/u/115789962356478683683/[Google Code Profile]
 
 The source for this blog is in the `source` branch of the https://github.com/msgilligan/msgilligan.github.io/tree/source[msgilligan/msgilligan.github.io] repository.
 
