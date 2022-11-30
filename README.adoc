@@ -5,15 +5,19 @@ Source repository for http://msgilligan.github.io[msgilligan.github.io].
 * Source files are in `source` branch.
 * Generated files are in `master` branch and displayed with Github Pages.
 
+== Prerequisites
+
+. Install JDK 11
+
 == Build Instructions
 
 To render the JBake site:
 
-    gradle jbake
+    ./gradlew bake
 
 To publish to Github pages:
 
-    gradle publish
+    ./gradlew publish
 
 You'll need to enter your Github username and password in the displayed dialog box.
 
