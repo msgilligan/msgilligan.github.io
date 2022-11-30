@@ -5,7 +5,6 @@ buildscript {
 }
 
 plugins {
-  id "org.ajoberstar.github-pages" version "1.5.1-rc.2"
   id 'org.jbake.site' version '5.5.0'
 }
 
@@ -15,29 +14,4 @@ jbake {
     clearCache = true
 }
 
-defaultTasks 'jbake'
-
-def siteDir = "$buildDir/jbake"
-
-githubPages {
-//  repoUri = 'git@github.com:msgilligan/msgilligan.github.io.git'
-  repoUri = 'https://github.com/msgilligan/msgilligan.github.io.git'
-  targetBranch = 'master'
-
-  pages {
-     from(file("$siteDir")) {
-     	into '.'
-     }
-  }
-  credentials {
-    // Use token stored as property for local builds and a travis encrypted key (in 'GH_TOKEN') for Travis builds
-    username = project.hasProperty('msgGithubAccessToken') ? msgGithubAccessToken : System.getenv('GH_TOKEN')
-    // Apparently password can't be null or '' if githubPages to use "hardcoded" credential in the username.
-    password = '\n'
-  }
-}
-
-publishGhPages.dependsOn jbake
-
-task publish(dependsOn: publishGhPages, group: 'render',
-            description: "Publishes buildDir to Github Pages on 'master' branch")
+defaultTasks 'bake'
