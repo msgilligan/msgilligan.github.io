@@ -3,26 +3,26 @@
 Source repository for http://msgilligan.github.io[msgilligan.github.io].
 
 * Source files are in `source` branch.
-* Generated files are in `master` branch and displayed with Github Pages.
+* Generated files are in `master` branch and displayed with GitHub Pages.
 
-== Prerequisites
+== GitHub Actions Auto-Deployment
+
+* https://github.com/msgilligan/msgilligan.github.io/deployments[Deployment History]
+* https://github.com/msgilligan/msgilligan.github.io/blob/source/.github/workflows/gradle.yml[gradle.yml] workflow file.
+
+== Local Build Instructions
+
+=== Prerequisites
 
 . Install JDK 11
 
-== Build Instructions
-
-To render the JBake site:
+To render the JBake static site:
 
     ./gradlew bake
 
-To publish to Github pages:
+The site will be generated in `build/jbake`.
 
-    ./gradlew publish
-
-You'll need to enter your Github username and password in the displayed dialog box.
-
-NOTE:: The file `feed.xml` is updated every time the `jbake` target is built, even if there were
-no other changes.
+NOTE:: The file `feed.xml` is updated every time the `bake` target is built, even if there were no other changes.
 
 
 
