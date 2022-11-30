@@ -1,6 +1,12 @@
 name: Gradle Build
 
-on: [push]
+on:
+  # Runs on pushes targeting the default branch (currently `source`)
+  push:
+    branches: [$default-branch]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   build:
@@ -30,3 +36,29 @@ jobs:
         restore-keys: ${{ runner.os }}-gradle
     - name: Build with Gradle
       run: ./gradlew bake --info --stacktrace
+    - name: Upload Github Pages Artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+          path: build/jbake
+
+  # Deploy job
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
